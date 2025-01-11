@@ -1,11 +1,11 @@
 [tool.poetry]
-name = "cursor-reset"
+name = "cursor-snap"
 version = "1.0.0"
 description = "A utility tool to manage and reset Cursor Editor app IDs"
 authors = ["Adel Elawady <adel50ali50@gmail.com>"]
 license = "MIT"
 readme = "README.md"
-packages = [{include = "cusrorReset"}]
+packages = [{include = "cursor_snap"}]
 
 [tool.poetry.dependencies]
 python = "^3.6"
@@ -22,7 +22,7 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
-cursor-reset = "cusrorReset.CursorReset:main"
+cursor-snap = "cursor_snap.cursor_snap:main"
 
 [tool.black]
 line-length = 88
