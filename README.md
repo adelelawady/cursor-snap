@@ -1,6 +1,6 @@
 # cursor-snap
 
-A Python tool for managing cursor-related functionality, providing precise cursor control and position management.
+ Cursor Trail Reset Tool
 
 ## Installation
 
