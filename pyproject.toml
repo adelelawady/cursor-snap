@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "cursor-snap"
-version = "2.0.0"
+version = "2.1.0"
 description = "A utility tool to manage and reset Cursor Editor app IDs"
 authors = ["Adel Elawady <adel50ali50@gmail.com>"]
 license = "MIT"
