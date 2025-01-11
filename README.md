@@ -31,38 +31,7 @@ The tool provides the following features:
 ### Command Line Interface
 
 ```bash
-# Save current cursor position
-cursor-snap save position_name
-
-# Restore cursor to saved position
-cursor-snap restore position_name
-
-# List all saved positions
-cursor-snap list
-
-# Reset all saved positions
-cursor-snap reset
-```
-
-### Python API
-
-```python
-from cursor_snap import CursorSnap
-
-# Initialize cursor snap
-cursor = CursorSnap()
-
-# Save current cursor position
-cursor.save_position("main_window")
-
-# Move cursor to saved position
-cursor.restore_position("main_window")
-
-# View all saved positions
-positions = cursor.get_saved_positions()
-
-# Reset all saved positions
-cursor.reset_positions()
+cursor-snap
 ```
 
 ## License
