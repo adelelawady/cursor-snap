@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "cursor-snap"
-version = "1.0.0"
+version = "2.0.0"
 description = "A utility tool to manage and reset Cursor Editor app IDs"
 authors = ["Adel Elawady <adel50ali50@gmail.com>"]
 license = "MIT"
@@ -22,14 +22,4 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
-cursor-snap = "cursor_snap.cursor_snap:main"
-
-[tool.black]
-line-length = 88
-target-version = ['py36']
-include = '\.pyi?$'
-
-[tool.flake8]
-max-line-length = 88
-extend-ignore = "E203"
-exclude = [".git", "__pycache__", "build", "dist"] 
+cursor-snap = "cursor_snap.cursor_snap:main" 
