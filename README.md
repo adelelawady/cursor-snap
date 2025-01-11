@@ -1,6 +1,6 @@
 # cursor-snap
 
-A Python tool for managing cursor-related functionality.
+A Python tool for managing cursor-related functionality, providing precise cursor control and position management.
 
 ## Installation
 
@@ -21,41 +21,49 @@ pip install .
 ## Features
 
 The tool provides the following features:
-- Reset App IDs
-- View Current IDs
+- Cursor Position Management: Save and restore cursor positions
+- Reset App IDs: Clear stored cursor positions
+- View Current IDs: Display active cursor position identifiers
+- Cross-platform Support: Works on Windows, macOS, and Linux
 
 ## Usage
 
-[Add detailed usage examples here]
+### Command Line Interface
 
-## Development
+```bash
+# Save current cursor position
+cursor-snap save position_name
 
-To set up the development environment:
+# Restore cursor to saved position
+cursor-snap restore position_name
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/adelelawady/cursor-snap.git
-   cd cursor-snap
-   ```
+# List all saved positions
+cursor-snap list
 
-2. Install development dependencies:
-   ```bash
-   pip install -e ".[dev]"
-   ```
+# Reset all saved positions
+cursor-snap reset
+```
 
-## Publishing Updates
+### Python API
 
-To publish a new version to PyPI:
+```python
+from cursor_snap import CursorSnap
 
-1. Update the version number in `setup.py`
-2. Build the distribution:
-   ```bash
-   python -m build
-   ```
-3. Upload to PyPI:
-   ```bash
-   twine upload dist/*
-   ```
+# Initialize cursor snap
+cursor = CursorSnap()
+
+# Save current cursor position
+cursor.save_position("main_window")
+
+# Move cursor to saved position
+cursor.restore_position("main_window")
+
+# View all saved positions
+positions = cursor.get_saved_positions()
+
+# Reset all saved positions
+cursor.reset_positions()
+```
 
 ## License
 
@@ -67,4 +75,8 @@ Adel Elawady (adel50ali50@gmail.com)
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
+
+## Support
+
+If you encounter any issues or have questions, please file an issue on the [GitHub repository](https://github.com/adelelawady/cursor-snap/issues).
