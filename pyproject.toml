@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "cursor-reset"
+version = "1.0.0"
+description = "A utility tool to manage and reset Cursor Editor app IDs"
+authors = ["Adel Elawady <adel50ali50@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "cusrorReset"}]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+rich = "^10.0.0"
+pathlib = "^1.0.1"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.0.0"
+black = "^23.0.0"
+flake8 = "^6.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+cursor-reset = "cusrorReset.CursorReset:main"
+
+[tool.black]
+line-length = 88
+target-version = ['py36']
+include = '\.pyi?$'
+
+[tool.flake8]
+max-line-length = 88
+extend-ignore = "E203"
+exclude = [".git", "__pycache__", "build", "dist"] 
