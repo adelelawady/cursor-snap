@@ -8,6 +8,7 @@ from rich import box
 from rich.text import Text
 from rich.align import Align
 from time import sleep
+import platform
 import json
 import uuid
 import os
@@ -57,7 +58,10 @@ def generate_uuid():
 
 class AppManager:
     def __init__(self):
-        self.storage_path = Path(os.getenv('APPDATA') + "\\Cursor\\User\\globalStorage\\storage.json").resolve()
+        if platform.system() == "Windows":
+            self.storage_path = Path(os.getenv('APPDATA') + "\\Cursor\\User\\globalStorage\\storage.json").resolve()
+        else:
+            self.storage_path = Path(os.getenv('HOME') + "/.config/Cursor/User/globalStorage/storage.json").resolve()
 
     def reset_app_ids(self):
         try:
